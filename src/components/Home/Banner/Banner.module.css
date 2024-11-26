@@ -1,0 +1,48 @@
+.banner{
+    width:100%;
+    height:400px;
+    background-color:red;
+}
+
+.slide{
+    width:100%;
+    height:100%;
+    background-color:yellow;
+    background-image:url("../../../assets/HomepageSlides/h1-slide-show-1_1_1.webp");
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    padding-left:10%;
+}
+.sidedetails{
+    width:40%;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    row-gap:8px;
+}
+
+.sidedetails >h1{
+    font-size:55px;
+    font-weight:bolder;
+    font-family: 'monospace';
+}
+.sidedetails>p{
+    font-weight:bold ;
+}
+
+.explorebtn{
+    background-color:black;
+    color:white;
+    padding:12px 20px;
+    border:1px solid black;
+    text-transform:uppercase;
+    cursor:pointer;
+    border-radius:8px;
+    font-weight:bold;
+}
+.explorebtn:hover{
+    background-color:transparent;
+    color:black;
+}
