@@ -1,0 +1,114 @@
+.container{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:flex;
+    width:80%;
+    justify-content:center;
+    column-gap:75px;
+    flex-wrap:wrap;
+    align-items:center;
+    row-gap:75px;
+}
+.outercontainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.imgdiv{
+    width:200px;
+    height:200px;
+    border-radius:10px;
+}
+.imgdiv>img{
+    border-radius:10px;
+}
+.headings{
+    width:80%;
+    display:flex;
+    font-size:20px;
+    font-weight:bold;
+    padding:10px;
+    justify-content:space-evenly;
+    background-color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+.details{
+    display:flex;
+    flex-direction:column;
+    row-gap:10px;
+    align-items:flex-start;
+    font-weight:500;
+}
+.productdiv{
+    width:220px;
+    display:flex;
+    flex-direction:column;
+    font-weight:bold;
+    font-size:20px;
+    box-shadow:0 0px 10px rgba(0, 0, 0, 0.2);
+    padding:10px;
+}
+.removebtn{
+    background-color:rgb(0, 0, 0);
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+    padding:8px 10px;
+    border-radius:5px;
+}
+@media (max-width: 768px) {
+    .container {
+      width: 90%;
+      column-gap: 50px;
+      row-gap: 50px;
+    }
+  
+    .productdiv {
+      width: 180px;
+      padding: 15px;
+      font-size: 18px;
+    }
+  
+    .imgdiv {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .removebtn {
+      padding: 6px 8px;
+      font-size: 14px;
+    }
+  
+    .details {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100%;
+      column-gap: 20px;
+      row-gap: 30px;
+    }
+  
+    .productdiv {
+      width: 150px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  
+    .imgdiv {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .removebtn {
+      padding: 5px 7px;
+      font-size: 12px;
+    }
+  
+    .details {
+      font-size: 12px;
+    }
+  }
+  

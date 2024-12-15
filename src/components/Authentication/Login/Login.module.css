@@ -44,3 +44,81 @@
 .btn:hover{
     background-color:rgb(8, 239, 255);
 }
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .outerContainer {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .formContainer {
+      width: 80%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      padding: 15px;
+    }
+  
+    .formContainer > input {
+      width: 90%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .btn {
+      width: 90%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .switchdiv {
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .switchdiv a {
+      color: #31e4e4;
+    }
+  
+    .formContainer > input:focus {
+      border: 1px solid skyblue;
+    }
+  }
+  @media (max-width: 480px) {
+    .outerContainer {
+      height: auto;
+      padding: 15px;
+    }
+  
+    .formContainer {
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      padding: 12px;
+    }
+  
+    .formContainer > input {
+      width: 100%;
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .switchdiv {
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+    }
+  
+    .switchdiv a {
+      color: #31e4e4;
+    }
+  
+    .formContainer > input:focus {
+      border: 1px solid skyblue;
+    }
+  }
+  

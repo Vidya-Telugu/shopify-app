@@ -1,0 +1,133 @@
+/* Outer container for the whole page */
+.outmost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f7fb;
+    min-height: 100vh;
+  }
+  
+  /* Container for the orders section */
+  .outercontainer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 1000px;
+  }
+  
+  /* Header for the orders section */
+  .outercontainer h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for individual order items */
+  .orderscontainer {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  
+  /* Styling for each product item in the order */
+  .product {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Container for image and text */
+  .imagediv {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  .imagediv img {
+    border-radius: 8px;
+    margin-right: 15px;
+  }
+  
+  .imagediv div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .trackbtn{
+    background-color:rgb(155, 153, 153);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+    padding:5px;
+    border:none;
+  }
+  .trackbtn:hover{
+    background-color:white;
+    color:black;
+  }
+  .imagediv p {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .imagediv p:first-child {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .product p {
+    font-size: 14px;
+    color: #777;
+  }
+  #date{
+    font-weight:40;
+   }
+  
+  .product p:last-child {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+  }
+ 
+  @media (max-width: 768px) {
+    .outercontainer {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .product {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .imagediv {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .imagediv img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  

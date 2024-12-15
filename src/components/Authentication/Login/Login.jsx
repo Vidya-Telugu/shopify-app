@@ -1,31 +1,39 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from "./Login.module.css";
 import { useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { login } from "../../../features/authSlice"
+import {toast} from "react-toastify";
+import { Link, useNavigate } from 'react-router-dom';
+import { getAuth,signInWithEmailAndPassword} from 'firebase/auth';
+import { Authcontext } from '../../../contexts/Authcontext';
 function Login() {
+  const navigate=useNavigate();
     const[Email,setEmail]=useState("");
     const[Password,setPassword]=useState("");
-    const dispatch=useDispatch();
+    const {login}=useContext(Authcontext);
     async function handleLogin(e){
         e.preventDefault();
-        const url="https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCWFDSXAxyezi2ktimyTD7FSQI4hAXfJik";
-         try{
-           const response=await axios.post(url,{
-                email:Email,
-                password:Password,
-                returnSecureToken:true,
-           });
-          const token=response.data.idToken;
-          dispatch(login(token));
-          setEmail("");
-          setPassword("");
-          alert("User Logged in Successfully");
-         }catch(error){
-            alert(error);
-         }
+        const auth=getAuth();
+        if(!Email && !Password){
+          toast.error("Please enter email and password");
+        }
+        try{
+           const userCredential=await signInWithEmailAndPassword(auth,Email,Password);
+           const token=await userCredential.user.getIdToken(true);
+           const user = userCredential.user;
+           const uid = user.uid; 
+           localStorage.setItem("uid",uid);
+           console.log("uid",uid)
+           console.log(token);
+           login(token);
+           localStorage.setItem("token",token);
+           navigate("/home");
+           setEmail("");
+           setPassword("");
+           toast.success("Logged in Successfully");
+           }
+        catch(error){
+            toast.error(error.message);
+        }
     }
   return (
      <>
@@ -37,8 +45,8 @@ function Login() {
         <label htmlFor='Password'>Password</label>
         <input type="password" id="Password" name="Password" value={Password} 
         placeholder="enter password" onChange={(e)=>setPassword(e.target.value)}></input>
-        <p>Forgot Password?</p>
-        <button type="submit" className={styles.btn}>Login</button>
+       <Link to="/forgotpassword">Forgot Password?</Link>
+       <button type="login" className={styles.btn}>Login</button>
       </form>
       <div className={styles.switchdiv}>
         Don't have an account?<Link to="/signup">Signup</Link>

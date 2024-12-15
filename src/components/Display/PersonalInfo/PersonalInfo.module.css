@@ -1,0 +1,106 @@
+.maincontainer{
+    display:flex;
+    width:100%;
+    justify-content:flex-start;
+}
+.orderspage{
+    padding:10px;
+    margin:0px;
+}
+.outerContainer{
+    display:flex;
+    width:50%;
+    justify-content:center;
+}
+.addressContainer{
+    display:flex;
+    width:50%;
+    justify-content:center;
+}
+.infoForm{
+    margin-top:30px;
+    box-shadow:0 5px 10px rgb(161, 157, 157);
+    padding:20px;
+}
+.addressform{
+    margin-top:30px;
+    box-shadow:0 5px 10px rgb(161, 157, 157);
+    padding:20px;
+}
+h3{
+    margin:10px 0px;
+}
+input{
+    width:300px;
+    padding:10px;
+    font-weight:bold;
+}
+.submitbtn,.editbtn{
+    border:none;
+    background-color:skyblue;
+    padding:8px 10px;
+    cursor:pointer;
+    color:rgb(255, 255, 255);
+    font-weight:bold;
+    border-radius:10px;
+    margin:10px;
+}
+
+.submitbtn:hover,.editbtn:hover{
+    background-color:rgb(68, 132, 188);
+}
+
+@media (max-width: 768px) {
+    .maincontainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .outerContainer, .addressContainer {
+      width: 90%;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  
+    .infoForm, .addressform {
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  
+    input {
+      width: 100%;
+      padding: 8px;
+    }
+  
+    .submitbtn, .editbtn {
+      width: 100%;
+      padding: 12px 0;
+    }
+  
+    .orderspage {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .outerContainer, .addressContainer {
+      width: 100%;
+    }
+  
+    .infoForm, .addressform {
+      padding: 10px;
+    }
+  
+    input {
+      padding: 6px;
+      font-size: 14px;
+    }
+  
+    .submitbtn, .editbtn {
+      padding: 10px;
+    }
+  }
+  
+

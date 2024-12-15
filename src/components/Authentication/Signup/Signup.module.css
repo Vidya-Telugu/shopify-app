@@ -45,3 +45,20 @@
 .btn:hover{
     background-color:rgb(8, 239, 255);
 }
+@media (max-width: 768px) {
+    .formContainer {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .formContainer {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .btn {
+      padding: 12px 0;
+    }
+  }
+  
